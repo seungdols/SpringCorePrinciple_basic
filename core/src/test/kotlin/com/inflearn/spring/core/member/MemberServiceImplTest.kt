@@ -22,6 +22,7 @@ internal class MemberServiceImplTest {
     memberService.join(member)
     val findMember = memberService.findMember(1L)
 
+    //then
     assertThat(member).isEqualTo(findMember)
   }
 }
