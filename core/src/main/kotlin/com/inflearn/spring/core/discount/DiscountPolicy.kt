@@ -15,5 +15,5 @@ interface DiscountPolicy {
    * @param price
    * @return 할인 대상 금액
    */
-  fun discount(member: Member, price: Int): Int
+  fun discount(member: Member?, price: Int): Int
 }
