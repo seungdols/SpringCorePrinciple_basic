@@ -8,7 +8,9 @@ package com.inflearn.spring.core.member
 class MemoryMemberRepository : MemberRepository {
 
 //  concurrent hashmap을 쓰는게 맞다.
-    private val store: MutableMap<Long, Member> = HashMap()
+    companion object {
+        private val store: MutableMap<Long, Member> = HashMap()
+    }
 
     override fun save(member: Member) {
         store[member.id] = member
