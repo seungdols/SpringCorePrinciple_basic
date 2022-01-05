@@ -9,11 +9,11 @@ import com.inflearn.spring.core.member.Member
  */
 interface DiscountPolicy {
 
-  /**
-   *
-   * @param member
-   * @param price
-   * @return 할인 대상 금액
-   */
-  fun discount(member: Member?, price: Int): Int
+    /**
+     *
+     * @param member
+     * @param price
+     * @return 할인 대상 금액
+     */
+    fun discount(member: Member?, price: Int): Int
 }
