@@ -14,16 +14,16 @@ import org.junit.jupiter.api.Test
  */
 internal class OrderServiceImplTest {
 
-  val memberService = MemberServiceImpl()
-  val orderService = OrderServiceImpl()
+    val memberService = MemberServiceImpl()
+    val orderService = OrderServiceImpl()
 
-  @Test
-  fun createOrder() {
-    val memberId = 1L
-    val member = Member(memberId, "memberA", Grade.VIP)
-    memberService.join(member)
+    @Test
+    fun createOrder() {
+        val memberId = 1L
+        val member = Member(memberId, "memberA", Grade.VIP)
+        memberService.join(member)
 
-    val order = orderService.createOrder(memberId, "itemA", 10000)
-    assertThat(order.discountPrice).isEqualTo(1000)
-  }
+        val order = orderService.createOrder(memberId, "itemA", 10000)
+        assertThat(order.discountPrice).isEqualTo(1000)
+    }
 }

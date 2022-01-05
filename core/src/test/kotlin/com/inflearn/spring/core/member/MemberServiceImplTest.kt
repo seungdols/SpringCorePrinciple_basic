@@ -11,18 +11,18 @@ import org.junit.jupiter.api.Test
  */
 internal class MemberServiceImplTest {
 
-  val memberService = MemberServiceImpl()
+    val memberService = MemberServiceImpl()
 
-  @Test
-  fun joinTest() {
-    //given
-    val member = Member(1L, "memberA", Grade.VIP)
+    @Test
+    fun joinTest() {
+        // given
+        val member = Member(1L, "memberA", Grade.VIP)
 
-    //when
-    memberService.join(member)
-    val findMember = memberService.findMember(1L)
+        // when
+        memberService.join(member)
+        val findMember = memberService.findMember(1L)
 
-    //then
-    assertThat(member).isEqualTo(findMember)
-  }
+        // then
+        assertThat(member).isEqualTo(findMember)
+    }
 }

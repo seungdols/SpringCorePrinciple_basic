@@ -7,11 +7,11 @@ package com.inflearn.spring.core.order
  */
 class Order(val memberId: Long, val itemName: String, val itemPrice: Int, val discountPrice: Int) {
 
-  fun caclulatePrice(): Int {
-    return itemPrice - discountPrice
-  }
+    fun caclulatePrice(): Int {
+        return itemPrice - discountPrice
+    }
 
-  override fun toString(): String {
-    return "Order(memberId=$memberId, itemName='$itemName', itemPrice=$itemPrice, discountPrice=$discountPrice)"
-  }
+    override fun toString(): String {
+        return "Order(memberId=$memberId, itemName='$itemName', itemPrice=$itemPrice, discountPrice=$discountPrice)"
+    }
 }

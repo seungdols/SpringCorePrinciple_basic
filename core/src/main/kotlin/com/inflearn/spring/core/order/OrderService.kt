@@ -6,5 +6,5 @@ package com.inflearn.spring.core.order
  * @Date 2022/01/03
  */
 interface OrderService {
-  fun createOrder(memberId: Long, itemName: String, itemPrice: Int): Order
+    fun createOrder(memberId: Long, itemName: String, itemPrice: Int): Order
 }
