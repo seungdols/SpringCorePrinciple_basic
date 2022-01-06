@@ -4,7 +4,6 @@ import com.inflearn.spring.core.member.Grade
 import com.inflearn.spring.core.member.Member
 import com.inflearn.spring.core.member.MemberServiceImpl
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 /**
@@ -15,7 +14,7 @@ import org.junit.jupiter.api.Test
 internal class OrderServiceImplTest {
 
     val memberService = MemberServiceImpl()
-    val orderService = OrderServiceImpl()
+    val orderService = OrderServiceImpl(null)
 
     @Test
     fun createOrder() {

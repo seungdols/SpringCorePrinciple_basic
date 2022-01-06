@@ -12,7 +12,7 @@ import com.inflearn.spring.core.order.OrderServiceImpl
  */
 fun main(args: Array<String>) {
     val memberService = MemberServiceImpl()
-    val orderService = OrderServiceImpl()
+    val orderService = OrderServiceImpl(null)
 
     val memberId = 1L
     val member = Member(memberId, "memberA", Grade.VIP)
