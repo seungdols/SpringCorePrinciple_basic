@@ -10,4 +10,3 @@ class Member(val id: Long, val name: String, val grade: Grade)
 fun createDefaultMember(): Member {
     return Member(0L, "", Grade.DEFAULT)
 }
-

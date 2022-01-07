@@ -17,5 +17,4 @@ class AppConfig {
     fun orderService(): OrderService = OrderServiceImpl(memoryMemberRepository(), discoutPolicy())
 
     fun discoutPolicy(): DiscountPolicy = FixDiscountPolicy()
-
 }
