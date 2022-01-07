@@ -16,7 +16,7 @@ class MemoryMemberRepository : MemberRepository {
         store[member.id] = member
     }
 
-    override fun findById(memberId: Long): Member? {
-        return store[memberId]
+    override fun findById(memberId: Long): Member {
+        return store[memberId] ?: createDefaultMember()
     }
 }
