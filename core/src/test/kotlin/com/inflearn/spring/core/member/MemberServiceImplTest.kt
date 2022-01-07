@@ -1,7 +1,7 @@
 package com.inflearn.spring.core.member
 
+import com.inflearn.spring.core.AppConfig
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 /**
@@ -11,7 +11,8 @@ import org.junit.jupiter.api.Test
  */
 internal class MemberServiceImplTest {
 
-    val memberService = MemberServiceImpl()
+    val appConfig = AppConfig()
+    val memberService = appConfig.memberService()
 
     @Test
     fun joinTest() {
