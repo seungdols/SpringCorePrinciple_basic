@@ -3,7 +3,6 @@ package com.inflearn.spring.core.order
 import com.inflearn.spring.core.AppConfig
 import com.inflearn.spring.core.member.Grade
 import com.inflearn.spring.core.member.Member
-import com.inflearn.spring.core.member.MemberServiceImpl
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
