@@ -6,7 +6,7 @@ class MemberServiceImpl(private val memberRepository: MemberRepository) : Member
         memberRepository.save(member)
     }
 
-    override fun findMember(memberId: Long): Member? {
+    override fun findMember(memberId: Long): Member {
         return memberRepository.findById(memberId)
     }
 }
