@@ -7,5 +7,6 @@ package com.inflearn.spring.core.member
  */
 enum class Grade {
     BASIC,
-    VIP
+    VIP,
+    DEFAULT, // 강의상에는 없음.
 }
