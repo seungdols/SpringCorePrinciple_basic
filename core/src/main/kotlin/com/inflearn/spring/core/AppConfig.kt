@@ -1,5 +1,6 @@
 package com.inflearn.spring.core
 
+import com.inflearn.spring.core.discount.DiscountPolicy
 import com.inflearn.spring.core.discount.FixDiscountPolicy
 import com.inflearn.spring.core.member.MemberService
 import com.inflearn.spring.core.member.MemberServiceImpl
@@ -9,11 +10,12 @@ import com.inflearn.spring.core.order.OrderServiceImpl
 
 class AppConfig {
 
-    fun memberService(): MemberService {
-       return MemberServiceImpl(MemoryMemberRepository())
-    }
+    private fun memoryMemberRepository() = MemoryMemberRepository()
 
-    fun orderService(): OrderService {
-        return OrderServiceImpl(MemoryMemberRepository(), FixDiscountPolicy())
-    }
+    fun memberService(): MemberService = MemberServiceImpl(memoryMemberRepository())
+
+    fun orderService(): OrderService = OrderServiceImpl(memoryMemberRepository(), discoutPolicy())
+
+    fun discoutPolicy(): DiscountPolicy = FixDiscountPolicy()
+
 }
