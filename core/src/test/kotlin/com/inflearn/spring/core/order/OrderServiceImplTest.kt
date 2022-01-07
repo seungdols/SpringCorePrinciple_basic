@@ -1,5 +1,6 @@
 package com.inflearn.spring.core.order
 
+import com.inflearn.spring.core.AppConfig
 import com.inflearn.spring.core.member.Grade
 import com.inflearn.spring.core.member.Member
 import com.inflearn.spring.core.member.MemberServiceImpl
@@ -13,8 +14,9 @@ import org.junit.jupiter.api.Test
  */
 internal class OrderServiceImplTest {
 
-    val memberService = MemberServiceImpl()
-    val orderService = OrderServiceImpl(null)
+    val appConfig = AppConfig()
+    val memberService = appConfig.memberService()
+    val orderService = appConfig.orderService()
 
     @Test
     fun createOrder() {
