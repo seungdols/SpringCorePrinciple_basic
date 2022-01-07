@@ -3,7 +3,6 @@ package com.inflearn.spring.core.discount
 import com.inflearn.spring.core.member.Grade
 import com.inflearn.spring.core.member.Member
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
