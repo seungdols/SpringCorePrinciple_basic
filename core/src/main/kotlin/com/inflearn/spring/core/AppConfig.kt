@@ -1,7 +1,7 @@
 package com.inflearn.spring.core
 
 import com.inflearn.spring.core.discount.DiscountPolicy
-import com.inflearn.spring.core.discount.FixDiscountPolicy
+import com.inflearn.spring.core.discount.RateDiscountPolicy
 import com.inflearn.spring.core.member.MemberService
 import com.inflearn.spring.core.member.MemberServiceImpl
 import com.inflearn.spring.core.member.MemoryMemberRepository
@@ -16,5 +16,5 @@ class AppConfig {
 
     fun orderService(): OrderService = OrderServiceImpl(memoryMemberRepository(), discoutPolicy())
 
-    fun discoutPolicy(): DiscountPolicy = FixDiscountPolicy()
+    fun discoutPolicy(): DiscountPolicy = RateDiscountPolicy()
 }
