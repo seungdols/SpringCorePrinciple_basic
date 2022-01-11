@@ -11,9 +11,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 fun main() {
 
     val applicationContext: ApplicationContext = AnnotationConfigApplicationContext(AppConfig::class.java)
-    val memberService: MemberService = applicationContext.getBean("memberService") as MemberService
+    val memberService: MemberService = applicationContext.getBean("memberService", MemberService::class.java)
 
-    val orderService: OrderService = applicationContext.getBean("orderService") as OrderService
+    val orderService: OrderService = applicationContext.getBean("orderService", OrderService::class.java)
 
     val member = Member(1L, "memberA", Grade.VIP)
     memberService.join(member)
