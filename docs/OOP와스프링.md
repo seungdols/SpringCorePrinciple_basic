@@ -29,3 +29,19 @@
 * IoC 컨테이너 또는 DI 컨테이너라 한다.
 * 의존관계 주입에 초점을 맞추어 최근에는 주로 DI 컨테이너라 한다.
 * 또는 어샘블러, 오브젝트 팩토리 등으로 불리기도 한다.
+
+## spring core docs 
+
+* https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans
+
+### 스프링 컨테이너 
+스프링 컨테이너를 부를 때 [BeanFactory](https://docs.spring.io/spring-framework/docs/5.3.14/javadoc-api/org/springframework/beans/factory/BeanFactory.html), [ApplicationContext](https://docs.spring.io/spring-framework/docs/5.3.14/javadoc-api/org/springframework/context/ApplicationContext.html) 로 구분해서 이야기한다. 이 부분은 뒤에서 설명하겠다. BeanFactory 를 직접 사용하는 경우는 거의 없으므로 일반적으로 ApplicationContext 를 스프링 컨테이너라 한다.
+
+* 문서를 보면, ApplicationContext는 BeanFactory의 하위 interface임을 알 수 있다. 
+
+### 빈 이름
+* 빈 이름은 메서드 이름을 사용한다. 
+* 빈 이름을 직접 부여할 수 도 있다.
+  * https://docs.spring.io/spring-framework/docs/5.3.14/javadoc-api/org/springframework/context/annotation/Bean.html 참고
+
+빈 이름은 항상 다른 이름을 부여해야 한다. 같은 이름을 부여하면, 다른 빈이 무시되거나, 기존 빈을 덮어버리거나 설정에 따라 오류가 발생한다.
