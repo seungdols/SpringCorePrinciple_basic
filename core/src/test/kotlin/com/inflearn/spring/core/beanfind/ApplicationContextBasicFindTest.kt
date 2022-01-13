@@ -31,7 +31,7 @@ class ApplicationContextBasicFindTest {
     @Test
     @DisplayName("구체 타입으로 조회")
     fun findBeanByImpl() {
-        val memberService: MemberServiceImpl = ac.getBean("memberService",MemberServiceImpl::class.java)
+        val memberService: MemberServiceImpl = ac.getBean("memberService", MemberServiceImpl::class.java)
         assertThat(memberService).isInstanceOf(MemberServiceImpl::class.java)
     }
 
