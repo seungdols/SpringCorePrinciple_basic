@@ -1,10 +1,8 @@
 package com.inflearn.spring.core.beanfind
 
-import com.inflearn.spring.core.AppConfig
 import com.inflearn.spring.core.discount.DiscountPolicy
 import com.inflearn.spring.core.discount.FixDiscountPolicy
 import com.inflearn.spring.core.discount.RateDiscountPolicy
-import com.inflearn.spring.core.member.MemberRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.DisplayName
