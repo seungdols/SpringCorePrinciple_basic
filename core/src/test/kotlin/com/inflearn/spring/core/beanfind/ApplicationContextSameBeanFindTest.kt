@@ -1,6 +1,5 @@
 package com.inflearn.spring.core.beanfind
 
-import com.inflearn.spring.core.AppConfig
 import com.inflearn.spring.core.member.MemberRepository
 import com.inflearn.spring.core.member.MemoryMemberRepository
 import org.assertj.core.api.Assertions.assertThat
@@ -34,12 +33,11 @@ class ApplicationContextSameBeanFindTest {
     @DisplayName("특정 타입을 모두 조회하기")
     fun findAllBeanByType() {
         val beansOfType: MutableMap<String, MemberRepository> = ac.getBeansOfType(MemberRepository::class.java)
-        for(key in beansOfType.keys) {
+        for (key in beansOfType.keys) {
             println("key=$key, value=${beansOfType.get(key)}")
         }
         println("beansOfType=$beansOfType")
         assertThat(beansOfType.size).isEqualTo(2)
-
     }
 
     companion object {
@@ -56,5 +54,4 @@ class ApplicationContextSameBeanFindTest {
             }
         }
     }
-
 }
