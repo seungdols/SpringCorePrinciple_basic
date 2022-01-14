@@ -45,3 +45,8 @@
   * https://docs.spring.io/spring-framework/docs/5.3.14/javadoc-api/org/springframework/context/annotation/Bean.html 참고
 
 빈 이름은 항상 다른 이름을 부여해야 한다. 같은 이름을 부여하면, 다른 빈이 무시되거나, 기존 빈을 덮어버리거나 설정에 따라 오류가 발생한다.
+
+## 스프링 빈 조회 - 상속 관계 
+
+* 부모 타입으로 조회 하면, 자식 타입도 함께 조회 한다. 
+* `Object` 타입으로 조회하면, 모든 스프링 빈을 조회 하게 된다.
