@@ -50,3 +50,16 @@
 
 * 부모 타입으로 조회 하면, 자식 타입도 함께 조회 한다. 
 * `Object` 타입으로 조회하면, 모든 스프링 빈을 조회 하게 된다.
+
+## BeanFactory와 ApplicationContext
+
+* BeanFactory는 스프링 컨테이너의 최상위 인터페이스다. 
+* ApplicationContext는 BeanFactory 기능을 모두 상속 받아서 제공 한다. 
+* ApplicationContext는 수 많은 부가 기능을 제공 한다. 
+  * 수 많은 Interface를 상속 하고 있다.
+
+### 정리 
+
+* ApplicationContext는 빈 관리 기능 + 편리한 부가 기능을 제공 한다. 
+* BeanFactory를 직접 사용할 일은 거의 없다. 대다수 ApplicationContext를 사용 한다. 
+* BeanFactory나 ApplicationContext를 스프링 컨테이너라고 한다. 
