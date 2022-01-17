@@ -15,7 +15,7 @@ class BeanDefinitionTest {
     @Test
     @DisplayName("빈 설정 메타정보 확인 - annotation")
     fun findApplicationBeanByAnnotation() {
-       val beanDefinitionNames: Array<String> = ac.beanDefinitionNames
+        val beanDefinitionNames: Array<String> = ac.beanDefinitionNames
         for (beanDefinitionName in beanDefinitionNames) {
             val beanDefinition: BeanDefinition = ac.getBeanDefinition(beanDefinitionName)
 
@@ -23,13 +23,12 @@ class BeanDefinitionTest {
                 println("beanDefinitionName=$beanDefinitionName, beanDefinition=$beanDefinition")
             }
         }
-
     }
 
     @Test
     @DisplayName("빈 설정 메타정보 확인 - xml")
     fun findApplicationBeanByXml() {
-       val beanDefinitionNames: Array<String> = xmlAc.beanDefinitionNames
+        val beanDefinitionNames: Array<String> = xmlAc.beanDefinitionNames
         for (beanDefinitionName in beanDefinitionNames) {
             val beanDefinition: BeanDefinition = xmlAc.getBeanDefinition(beanDefinitionName)
 
@@ -37,7 +36,5 @@ class BeanDefinitionTest {
                 println("beanDefinitionName=$beanDefinitionName, beanDefinition=$beanDefinition")
             }
         }
-
     }
-
 }
