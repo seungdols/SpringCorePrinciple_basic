@@ -14,13 +14,13 @@ import org.springframework.context.annotation.Configuration
 class AppConfig {
 
     @Bean
-    fun memoryMemberRepository() = MemoryMemberRepository()
+    fun memberRepository() = MemoryMemberRepository()
 
     @Bean
-    fun memberService(): MemberService = MemberServiceImpl(memoryMemberRepository())
+    fun memberService(): MemberService = MemberServiceImpl(memberRepository())
 
     @Bean
-    fun orderService(): OrderService = OrderServiceImpl(memoryMemberRepository(), discoutPolicy())
+    fun orderService(): OrderService = OrderServiceImpl(memberRepository(), discoutPolicy())
 
     @Bean
     fun discoutPolicy(): DiscountPolicy = RateDiscountPolicy()
