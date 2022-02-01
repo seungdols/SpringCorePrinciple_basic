@@ -30,4 +30,14 @@ class ConfingurationSingletonTest {
         assertThat(memberServiceImpl.getMemberRepository()).isSameAs(memberRepository)
         assertThat(orderServiceImpl.getMemberRepository()).isSameAs(memberRepository)
     }
+
+    @Test
+    fun `Configuration Deep Test`() {
+        val ac = AnnotationConfigApplicationContext(AppConfig::class.java)
+
+        val bean = ac.getBean(AppConfig::class.java)
+
+        // bean: class com.inflearn.spring.core.AppConfig$$EnhancerBySpringCGLIB$$3befd555
+        println("bean: ${bean.javaClass}")
+    }
 }
