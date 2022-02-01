@@ -1,8 +1,10 @@
 package com.inflearn.spring.core.singleton
 
 import com.inflearn.spring.core.AppConfig
+import com.inflearn.spring.core.member.MemberService
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
+import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 class SingletonTest {
 
@@ -29,5 +31,20 @@ class SingletonTest {
         println("singletonService2: $singletonService2")
 
         assertThat(singletonService1).isSameAs(singletonService2)
+    }
+
+    @Test
+    fun `스프링 컨테이너와 싱글톤`() {
+
+        val ac = AnnotationConfigApplicationContext(AppConfig::class.java)
+
+        val memberService1 = ac.getBean("memberService", MemberService::class.java)
+
+        val memberService2 = ac.getBean("memberService", MemberService::class.java)
+
+        println("memberService1: $memberService1")
+        println("memberService2: $memberService2")
+
+        assertThat(memberService1).isSameAs(memberService2)
     }
 }
