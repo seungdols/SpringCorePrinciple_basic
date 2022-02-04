@@ -34,17 +34,19 @@ class ComponentFilterAppConfigTest {
     companion object {
         @Configuration
         @ComponentScan(
-            includeFilters = [ComponentScan.Filter(
-                type = FilterType.ANNOTATION,
-                classes = [MyIncludeComponent::class]
-            )],
-            excludeFilters = [ComponentScan.Filter(
-                type = FilterType.ANNOTATION,
-                classes = [MyExcludeComponent::class]
-            )]
+            includeFilters = [
+                ComponentScan.Filter(
+                    type = FilterType.ANNOTATION,
+                    classes = [MyIncludeComponent::class]
+                )
+            ],
+            excludeFilters = [
+                ComponentScan.Filter(
+                    type = FilterType.ANNOTATION,
+                    classes = [MyExcludeComponent::class]
+                )
+            ]
         )
-        class ComponentFilterAppConfig {
-
-        }
+        class ComponentFilterAppConfig
     }
 }
