@@ -37,3 +37,9 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+kotlinter {
+//    indentSize = 2
+    experimentalRules = false
+    disabledRules = arrayOf("no-wildcard-imports")
+}
