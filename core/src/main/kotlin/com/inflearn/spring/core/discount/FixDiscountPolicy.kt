@@ -2,7 +2,6 @@ package com.inflearn.spring.core.discount
 
 import com.inflearn.spring.core.member.Grade
 import com.inflearn.spring.core.member.Member
-import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.stereotype.Component
 
 /**
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Component
  * @Author seungdols
  * @Date 2022/01/03
  */
-@Qualifier("fixDiscountPolicy")
 @Component
 class FixDiscountPolicy : DiscountPolicy {
 

@@ -2,7 +2,11 @@ package com.inflearn.spring.core.discount
 
 import com.inflearn.spring.core.member.Grade
 import com.inflearn.spring.core.member.Member
+import org.springframework.context.annotation.Primary
+import org.springframework.stereotype.Component
 
+@Component
+@Primary
 class RateDiscountPolicy : DiscountPolicy {
 
     private val discountPercent = 10
