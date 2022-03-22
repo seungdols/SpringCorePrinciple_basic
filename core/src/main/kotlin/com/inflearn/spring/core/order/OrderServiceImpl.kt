@@ -1,6 +1,5 @@
 package com.inflearn.spring.core.order
 
-import com.inflearn.spring.core.annotation.MainDiscountPolicy
 import com.inflearn.spring.core.discount.DiscountPolicy
 import com.inflearn.spring.core.member.MemberRepository
 import org.springframework.stereotype.Component
@@ -9,7 +8,6 @@ import org.springframework.stereotype.Component
 @Component
 class OrderServiceImpl(
     private val memberRepository: MemberRepository,
-    @MainDiscountPolicy
     private val discountPolicy: DiscountPolicy
 ) : OrderService {
 
