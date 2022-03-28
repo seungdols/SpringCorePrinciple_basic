@@ -18,7 +18,8 @@ internal class NetworkClientTest {
     companion object {
         @Configuration
         class LifeCycleConfig {
-            @Bean(initMethod = "init", destroyMethod = "close")
+//            @Bean(initMethod = "init", destroyMethod = "close")
+            @Bean
             fun networkClient(): NetworkClient {
                 return NetworkClient("http://hello-spring.dev")
             }
