@@ -1,11 +1,8 @@
 package com.inflearn.spring.core.lifecycle
 
-import org.springframework.beans.factory.DisposableBean
-import org.springframework.beans.factory.InitializingBean
-
 class NetworkClient(
     val url: String
-) : InitializingBean, DisposableBean {
+) {
 
     init {
         println("url=$url")
@@ -23,14 +20,12 @@ class NetworkClient(
         println("close connection...")
     }
 
-    override fun afterPropertiesSet() {
-        println("NetworkClient.afterPropertiesSet")
+    fun init() {
         connect()
         call("초기화 연결 메시지")
     }
 
-    override fun destroy() {
-        println("NetworkClient.destroy")
+    fun close() {
         disconnect()
     }
 }
