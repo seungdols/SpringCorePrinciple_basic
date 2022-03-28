@@ -11,7 +11,7 @@ internal class NetworkClientTest {
 
         val ac = AnnotationConfigApplicationContext(LifeCycleConfig::class.java)
         val networkClient = ac.getBean(NetworkClient::class.java)
-        
+
         ac.close()
     }
 
